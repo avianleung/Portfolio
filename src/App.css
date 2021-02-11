@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+/* #root {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(119, 0, 255, 0.226),
+    rgb(0, 163, 228)
+  );
+} */
+
+#root {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(145, 93, 25, 0.226),
+    rgb(0, 163, 228)
+  );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 7.5%;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.profile-card {
+  margin: auto;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  height: 60vh;
+  width: 12%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-left: 5vh !important;
+  width: 60%;
+}
+
+.nav-bar {
+  margin-bottom: 5vh !important;
+  height: 5vh;
+}
+
+.main-card {
+  height: 60vh;
+}
+
+.MuiTabs-flexContainer {
+  justify-content: space-between !important;
+}
+
+/* .color {
+  color: rgb(55, 94, 97);
+} */
+
+.color {
+  /* color: #546175; */
+  color: #546175;
 }
