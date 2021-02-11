@@ -8,7 +8,7 @@ import Projects from "./Projects";
 import "../App.css";
 
 const Main = () => {
-  const [navState, setNavState] = useState(1);
+  const [navState, setNavState] = useState(0);
 
   return (
     <React.Fragment>
