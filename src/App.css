@@ -40,10 +40,12 @@
 .nav-bar {
   margin-bottom: 5vh !important;
   height: 5vh;
+  min-width: 100%;
 }
 
 .main-card {
   height: 60vh;
+  min-width: 100%;
 }
 
 .MuiTabs-flexContainer {

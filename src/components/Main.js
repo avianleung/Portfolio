@@ -22,7 +22,7 @@ const Main = () => {
             >
               <Profile />
             </Paper>
-            <div className='nav-main align-bottom'>
+            <div className='nav-main'>
               <div className='nav-bar'>
                 <Nav navState={navState} setNavState={setNavState} />
               </div>
