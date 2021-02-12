@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import OpenInNewIcon from "@material-ui/icons/OpenInNew";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import { animated, useSpring } from "react-spring";
 import "../App.css";
 
 const useStyles = makeStyles({
@@ -14,6 +15,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    justifyContent: "center",
   },
   card: {
     width: 300,

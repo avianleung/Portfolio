@@ -75,7 +75,7 @@ const Experience = () => {
       <div className='row'>
         <Zoom in={zoom}>
           <Typography
-            className='color'
+            className='mainColor'
             variant='subtitle1'
             style={{ marginTop: "8vh" }}
           >
@@ -123,7 +123,7 @@ const Experience = () => {
       <div className='row'>
         <Zoom in={zoom}>
           <Typography
-            className='color text-center'
+            className='mainColor text-center'
             variant='subtitle1'
             style={{ marginBottom: "10vh" }}
           >

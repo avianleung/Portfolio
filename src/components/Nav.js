@@ -2,14 +2,25 @@ import React from "react";
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import blue from "@material-ui/core/colors/blue";
+import {
+  createMuiTheme,
+  ThemeProvider,
+  makeStyles,
+} from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  mainBg: {
+    background:
+      "linear-gradient(to bottom right, rgb(0, 175, 228), rgb(61, 106, 255))",
+  },
+});
 
 const Nav = (props) => {
+  const classes = useStyles();
   const theme = createMuiTheme({
     palette: {
       primary: {
-        main: "#546175",
+        main: "#00a3e4",
       },
     },
   });
@@ -29,9 +40,9 @@ const Nav = (props) => {
           centered
           justify='space-between'
         >
-          <Tab label='About' />
-          <Tab label='Experience' />
-          <Tab label='Projects' />
+          <Tab label={<span style={{ fontWeight: "bold" }}>About</span>} />
+          <Tab label={<span style={{ fontWeight: "bold" }}>Experience</span>} />
+          <Tab label={<span style={{ fontWeight: "bold" }}>Projects</span>} />
         </Tabs>
       </Paper>
     </ThemeProvider>

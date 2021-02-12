@@ -5,11 +5,22 @@ import Profile from "./Profile";
 import About from "./About";
 import Experience from "./Experience";
 import Projects from "./Projects";
+
+import { makeStyles } from "@material-ui/core/styles";
 import "../App.css";
+
+const useStyles = makeStyles({
+  paperBg: {
+    background: "white",
+  },
+  mainBg: {
+    background: "#240090",
+  },
+});
 
 const Main = () => {
   const [navState, setNavState] = useState(0);
-
+  const classes = useStyles();
   return (
     <React.Fragment>
       <div className='container-fluid'>
@@ -17,6 +28,7 @@ const Main = () => {
           <div className='row'>
             <Paper
               className='profile-card align-baseline'
+              classes={{ root: classes.paperBg }}
               elevation={3}
               style={{ maxHeight: "100%", overflow: "auto" }}
             >
@@ -28,6 +40,7 @@ const Main = () => {
               </div>
               <Paper
                 className='container main-card'
+                classes={{ root: classes.paperBg }}
                 elevation={3}
                 style={{ maxHeight: "100%", overflow: "auto" }}
               >

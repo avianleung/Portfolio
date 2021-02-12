@@ -21,7 +21,7 @@ const About = () => {
     <div style={{ marginLeft: "3vh", marginTop: "2vh", marginRight: "2vh" }}>
       <br />
       <Zoom in={zoom}>
-        <Typography className='color' variant='h4'>
+        <Typography className='mainColor' variant='h4'>
           Welcome! I'm Avian.
         </Typography>
       </Zoom>
@@ -29,7 +29,7 @@ const About = () => {
       <div className='row'>
         <div className='col-6'>
           <Zoom in={zoom}>
-            <Typography className='color' variant='subtitle1'>
+            <Typography className='mainColor' variant='subtitle1'>
               I am an aspiring software engineer based in Toronto, ON who enjoys
               developing applications that live on the internet. I am a
               mechanical engineering student at the University of Waterloo and
@@ -39,14 +39,14 @@ const About = () => {
           </Zoom>
           <br />
           <Zoom in={zoom}>
-            <Typography className='color' variant='subtitle1'>
+            <Typography className='mainColor' variant='subtitle1'>
               Feel free to view my experience and projects tab to see some of my
               work.
             </Typography>
           </Zoom>
           <br />
           <Zoom in={zoom}>
-            <Typography className='color' variant='subtitle1'>
+            <Typography className='mainColor' variant='subtitle1'>
               I am currently looking for a software engineering internship for
               the Fall 2021 term!
             </Typography>
@@ -54,7 +54,11 @@ const About = () => {
         </div>
         <div className='col'>
           <Zoom in={zoom}>
-            <Typography className='color' variant='subtitle1' align='center'>
+            <Typography
+              className='mainColor'
+              variant='subtitle1'
+              align='center'
+            >
               Here are a few languages and technologies I've recently been
               working with:
             </Typography>
@@ -65,7 +69,7 @@ const About = () => {
               <div className='col'>
                 <Zoom in={zoom}>
                   <Typography
-                    className='color'
+                    className='mainColor'
                     variant='subtitle2'
                     align='center'
                   >
@@ -77,7 +81,7 @@ const About = () => {
               <div className='col'>
                 <Zoom in={zoom}>
                   <Typography
-                    className='color'
+                    className='mainColor'
                     variant='subtitle2'
                     align='center'
                   >

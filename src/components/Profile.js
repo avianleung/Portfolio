@@ -18,9 +18,9 @@ import blue from "@material-ui/core/colors/blue";
 const useStyles = makeStyles((theme) => ({
   id: {
     display: "flex",
-    alignItems: "center",
     flexDirection: "column",
-    paddingTop: "3vh",
+    alignItems: "center",
+    height: "100%",
     "& > *": {
       margin: theme.spacing(1),
     },
@@ -28,8 +28,10 @@ const useStyles = makeStyles((theme) => ({
   large: {
     width: theme.spacing(10),
     height: theme.spacing(10),
-    color: theme.palette.getContrastText("#546175"),
-    backgroundColor: "#546175",
+    color: theme.palette.getContrastText("#282828"),
+    backgroundColor: "#282828",
+    marginTop: "5vh",
+    marginBottom: "2vh",
   },
   color: {
     color: blue[800],
@@ -43,9 +45,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   button: {
-    margin: theme.spacing(1),
-    position: "relative",
-    top: "6vh",
+    color: "#32a206a",
   },
 }));
 
@@ -55,7 +55,7 @@ const Profile = () => {
   const theme = createMuiTheme({
     palette: {
       primary: {
-        main: "#546175",
+        main: "#282828",
       },
     },
   });
@@ -64,35 +64,45 @@ const Profile = () => {
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <div className={classes.id}>
-          <Avatar className={classes.large}>AL</Avatar>
-          <Typography className='color' variant='h6'>
+          <Avatar
+            className={classes.large}
+            src='../../public/logo.png'
+          ></Avatar>
+          <Typography className='mainColor' variant='h6'>
             Avian <span style={{ fontWeight: "bold" }}>Leung</span>
           </Typography>
           <IconButton
+            style={{ marginTop: "auto", marginBottom: "2vh" }}
             onClick={() =>
               window.open("mailto:avian.leung@gmail.com", "_blank")
             }
           >
-            <MailOutlineIcon className='color' style={{ marginTop: "1vh" }} />
-          </IconButton>
-          <IconButton onClick={() => window.open("tel:555-555-5555", "_blank")}>
-            <PhoneOutlinedIcon className='color' />
+            <MailOutlineIcon className='mainColor' />
           </IconButton>
           <IconButton
+            style={{ marginBottom: "2vh" }}
+            onClick={() => window.open("tel:555-555-5555", "_blank")}
+          >
+            <PhoneOutlinedIcon className='mainColor' />
+          </IconButton>
+          <IconButton
+            style={{ marginBottom: "2vh" }}
             onClick={() =>
               window.open("https://www.linkedin.com/in/avianleung/", "_blank")
             }
           >
-            <LinkedInIcon className='color' />
+            <LinkedInIcon className='mainColor' />
           </IconButton>
           <IconButton
+            style={{ marginBottom: "7vh" }}
             onClick={() =>
               window.open("https://github.com/avianleung", "_blank")
             }
           >
-            <GitHubIcon className='color' />
+            <GitHubIcon className='mainColor' />
           </IconButton>
           <Button
+            style={{ marginTop: "auto", marginBottom: "3vh" }}
             variant='contained'
             color='primary'
             className={classes.button}
