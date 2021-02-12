@@ -55,7 +55,7 @@ const Projects = () => {
       imgSrc: "../../proj-logo/Recipe.png",
       tech: ["React, OCR"],
       description:
-        "An app designed for inexperienced home cooks. It parse receipt data which is passed to another API that fetches recipes that include these ingredients.",
+        "An app designed for inexperienced home cooks. It parses receipt data which is passed to another API which fetches recipes that include those ingredients.",
       github: "https://github.com/fredjywang/Receipt-To-Recipe",
     },
     {
