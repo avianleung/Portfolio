@@ -86,7 +86,7 @@ const Experience = () => {
           </Typography>
         </Zoom>
       </div>
-      <div className='row'>
+      <div className='row mb-5'>
         {expArray.map((exp, idx) => (
           <Zoom in={zoom}>
             <div className='col'>
@@ -135,7 +135,20 @@ const Experience = () => {
             variant='subtitle1'
             style={{ marginBottom: "10vh" }}
           >
-            See my resume for more details.
+            See my{" "}
+            <span
+              className='compColor'
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1HI-CEtiWkRQuxXJVFwfc26Fou_zdMpD7/view?usp=sharing",
+                  "_blank"
+                )
+              }
+              style={{ cursor: "pointer" }}
+            >
+              resume
+            </span>{" "}
+            for more details.
           </Typography>
         </Zoom>
       </div>

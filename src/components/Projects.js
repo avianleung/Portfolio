@@ -15,11 +15,12 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
+    marginLeft: "3vh",
+    marginRight: "3vh",
+    marginTop: "4vh",
+    marginBottom: "4vh",
   },
-  card: {
-    width: 300,
-  },
+  card: {},
   bullet: {
     display: "inline-block",
     margin: "0 2px",
@@ -42,6 +43,7 @@ const Projects = () => {
   const projArray = [
     {
       title: "Lazy Cover Letter",
+      imgSrc: "../../proj-logo/Letter.png",
       tech: ["React"],
       description:
         "This application formats input text into a cover letter rendered in real time. It replaces the company name and job position with the data provided by the user.",
@@ -50,6 +52,7 @@ const Projects = () => {
     },
     {
       title: "Receipt To Recipe",
+      imgSrc: "../../proj-logo/Recipe.png",
       tech: ["React, OCR"],
       description:
         "An app designed for inexperienced home cooks. It parse receipt data which is passed to another API that fetches recipes that include these ingredients.",
@@ -57,6 +60,7 @@ const Projects = () => {
     },
     {
       title: "FooDecision",
+      imgSrc: "../../proj-logo/Food.png",
       tech: ["React, Node.js, Express.js, Cheerio"],
       description:
         "FooDecision is an application built for the indecisive restaurant goer. The user swipes (like tinder) on the top 30 retaurants in their location.",
@@ -64,6 +68,7 @@ const Projects = () => {
     },
     {
       title: "Fit Print",
+      imgSrc: "../../proj-logo/Workout.png",
       tech: ["React, Node.js, Express.js, MySQL"],
       description:
         "Fit print allows users to track their workouts by interacting with a very minimalistic UI. They can request, create, update and delete workouts by using this UI.",
@@ -71,6 +76,7 @@ const Projects = () => {
     },
     {
       title: "WeatherLine",
+      imgSrc: "../../proj-logo/Weather.png",
       tech: ["React"],
       description:
         "WeatherLine is a simple application that utilizes the DarkSky API as well as Google's geocoding API to return the given weather in a location requested by the user.",
@@ -92,69 +98,80 @@ const Projects = () => {
   ];
 
   return (
-    <div
-      className={classes.root}
-      style={{ marginLeft: "3vh", marginTop: "4vh", marginBottom: "4vh" }}
-    >
-      {/* <div className='row'>
+    <div className={classes.root}>
+      <div className='row'>
         <Zoom in={zoom}>
           <Typography
-            className='color'
+            className='mainColor'
             variant='subtitle1'
-            style={{ marginTop: "4vh", marginBottom: "4vh" }}
+            style={{ marginBottom: "4vh" }}
           >
             Noteworty Projects.
           </Typography>
         </Zoom>
-      </div> */}
-      <div className='row d-flex justify-content-center'>
-        {projArray.map((proj, idx) => (
-          <Zoom in={zoom}>
-            <div className='col-4' style={{ marginBottom: "3vh" }}>
-              <Card className={classes.card} variant='outlined'>
-                <CardContent>
-                  <Typography variant='subtitle1' component='h2'>
-                    {proj.title}
-                  </Typography>
-                  <Typography
-                    variant='body2'
-                    component='p'
-                    color='textSecondary'
-                    style={{ marginBottom: "0.5vh" }}
-                  >
-                    {proj.tech.map((tech, idx) => (
-                      <spam>
-                        {tech}
-                        {proj.tech.length - 1 === idx ? "" : bull}
-                      </spam>
-                    ))}
-                  </Typography>
-                  <Typography
-                    variant='caption'
-                    component='p'
-                    color='textSecondary'
-                  >
-                    {proj.description}
-                  </Typography>
-                </CardContent>
-                <div className='d-flex justify-content-end'>
-                  <IconButton
-                    onClick={() => window.open(proj.github, "_blank")}
-                  >
-                    <GitHubIcon />
-                  </IconButton>
-                  {proj.hasOwnProperty("link") && (
-                    <IconButton
-                      onClick={() => window.open(proj.link, "_blank")}
+      </div>
+      <div className='d-flex align-items-center'>
+        <div className='row justify-content-center'>
+          {projArray.map((proj, idx) => (
+            <Zoom in={zoom}>
+              <div className='col-3' style={{ marginBottom: "3vh" }}>
+                <Card
+                  className={classes.card}
+                  variant='outlined'
+                  style={{ backgroundColor: "#fafafa" }}
+                >
+                  <CardContent>
+                    <Typography
+                      variant='subtitle1'
+                      component='h2'
+                      style={{ display: "flex", marginBottom: "0.75vh" }}
                     >
-                      <OpenInNewIcon />
+                      <img
+                        src={proj.imgSrc}
+                        style={{ width: "11%", marginRight: "2vh" }}
+                      />
+                      {proj.title}
+                    </Typography>
+                    <Typography
+                      variant='body2'
+                      component='p'
+                      color='textSecondary'
+                      style={{ marginBottom: "0.5vh" }}
+                    >
+                      {proj.tech.map((tech, idx) => (
+                        <spam>
+                          {tech}
+                          {proj.tech.length - 1 === idx ? "" : bull}
+                        </spam>
+                      ))}
+                    </Typography>
+                    <Typography
+                      variant='caption'
+                      component='p'
+                      color='textSecondary'
+                    >
+                      {proj.description}
+                    </Typography>
+                  </CardContent>
+                  <div className='d-flex justify-content-center'>
+                    <IconButton
+                      onClick={() => window.open(proj.github, "_blank")}
+                    >
+                      <GitHubIcon />
                     </IconButton>
-                  )}
-                </div>
-              </Card>
-            </div>
-          </Zoom>
-        ))}
+                    {proj.hasOwnProperty("link") && (
+                      <IconButton
+                        onClick={() => window.open(proj.link, "_blank")}
+                      >
+                        <OpenInNewIcon />
+                      </IconButton>
+                    )}
+                  </div>
+                </Card>
+              </div>
+            </Zoom>
+          ))}
+        </div>
       </div>
     </div>
   );

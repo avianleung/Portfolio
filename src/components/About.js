@@ -76,47 +76,51 @@ const About = (props) => {
       </div>
       <br />
       <br />
-      <div className='row'>
-        <div className='col'>
-          <Zoom in={zoom}>
-            <Typography
-              className='mainColor'
-              variant='subtitle1'
-              align='center'
-            >
-              Here are a few languages and technologies I've recently been
-              working with:
-            </Typography>
-          </Zoom>
-          <br />
-          {techArray.map((technology, idx) => (
-            <div className='row' style={{ marginBottom: "1vh" }}>
-              <div className='col'>
-                <Zoom in={zoom}>
-                  <Typography
-                    className='mainColor'
-                    variant='subtitle2'
-                    align='center'
-                  >
-                    {technology[0]}
-                  </Typography>
-                </Zoom>
-              </div>
-              <br />
-              <div className='col'>
-                <Zoom in={zoom}>
-                  <Typography
-                    className='mainColor'
-                    variant='subtitle2'
-                    align='center'
-                  >
-                    {technology[1]}
-                  </Typography>
-                </Zoom>
-              </div>
-              <br />
+      <div className='container-fluid d-flex justify-content-center'>
+        <div className='row'>
+          <div className='col'>
+            <Zoom in={zoom}>
+              <Typography
+                className='mainColor'
+                variant='subtitle1'
+                align='left'
+              >
+                Here are a few languages and technologies I've recently been
+                working with:
+              </Typography>
+            </Zoom>
+            <br />
+            <div className='container '>
+              {techArray.map((technology, idx) => (
+                <div className='row' style={{ marginBottom: "1vh" }}>
+                  <div className='col'>
+                    <Zoom in={zoom}>
+                      <Typography
+                        className='mainColor'
+                        variant='subtitle2'
+                        align='center'
+                      >
+                        {technology[0]}
+                      </Typography>
+                    </Zoom>
+                  </div>
+                  <br />
+                  <div className='col'>
+                    <Zoom in={zoom}>
+                      <Typography
+                        className='mainColor'
+                        variant='subtitle2'
+                        align='center'
+                      >
+                        {technology[1]}
+                      </Typography>
+                    </Zoom>
+                  </div>
+                  <br />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </div>
