@@ -44,7 +44,7 @@ const Main = () => {
                 elevation={3}
                 style={{ maxHeight: "100%", overflow: "auto" }}
               >
-                {navState === 0 && <About />}
+                {navState === 0 && <About setNavState={setNavState} />}
                 {navState === 1 && <Experience />}
                 {navState === 2 && <Projects />}
               </Paper>

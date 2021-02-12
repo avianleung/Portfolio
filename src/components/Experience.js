@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   card: {
-    width: 250,
+    width: 350,
   },
   bullet: {
     display: "inline-block",
@@ -43,18 +43,21 @@ const Experience = () => {
       company: "University of Waterloo",
       position: "Full Stack Developer",
       tech: ["React", "WebRTC", "IBM Cloud", "Nginx"],
+      color: "#00c57a",
     },
     {
       period: "Summer 2020",
       company: "Fiberlink Inc.",
       position: "Full Stack Developer",
       tech: ["React", "Node.js", "Express.js", "MySQL", "AWS"],
+      color: "#00A3E4",
     },
     {
       period: "Summer 2020",
       company: "Mingle Mask",
       position: "Full Stack Developer",
       tech: ["React", "Node.js", "Express.js", "MySQL", "AWS"],
+      color: "#000BE6",
     },
   ];
 
@@ -87,7 +90,12 @@ const Experience = () => {
         {expArray.map((exp, idx) => (
           <Zoom in={zoom}>
             <div className='col'>
-              <Card className={classes.card} variant='outlined'>
+              <Card
+                className={classes.card}
+                variant='outlined'
+                elevation={3}
+                style={{ borderColor: exp.color }}
+              >
                 <CardContent>
                   <Typography
                     className={classes.title}
@@ -97,7 +105,7 @@ const Experience = () => {
                     {exp.period}
                   </Typography>
                   <Typography variant='h6' component='h2'>
-                    {exp.position}
+                    <span style={{ color: exp.color }}>{exp.position}</span>
                   </Typography>
                   <Typography className={classes.pos} color='textSecondary'>
                     {exp.company}

@@ -3,7 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import Zoom from "@material-ui/core/Zoom";
 import "../App.css";
 
-const About = () => {
+const About = (props) => {
   const [zoom, setZoom] = useState(false);
 
   useEffect(() => {
@@ -21,13 +21,19 @@ const About = () => {
     <div style={{ marginLeft: "3vh", marginTop: "2vh", marginRight: "2vh" }}>
       <br />
       <Zoom in={zoom}>
-        <Typography className='mainColor' variant='h4'>
+        <Typography className='mainColor mb-3' variant='h4'>
           Welcome! I'm Avian.
         </Typography>
       </Zoom>
+      <Zoom in={zoom}>
+        <Typography className='mainColor' variant='h6'>
+          Software Developer & Student
+        </Typography>
+      </Zoom>
+
       <br />
       <div className='row'>
-        <div className='col-6'>
+        <div className='col'>
           <Zoom in={zoom}>
             <Typography className='mainColor' variant='subtitle1'>
               I am an aspiring software engineer based in Toronto, ON who enjoys
@@ -40,8 +46,23 @@ const About = () => {
           <br />
           <Zoom in={zoom}>
             <Typography className='mainColor' variant='subtitle1'>
-              Feel free to view my experience and projects tab to see some of my
-              work.
+              Feel free to view my{" "}
+              <span
+                className='accentColor'
+                onClick={() => props.setNavState(1)}
+                style={{ cursor: "pointer" }}
+              >
+                experience
+              </span>{" "}
+              and{" "}
+              <span
+                className='accentColor'
+                onClick={() => props.setNavState(2)}
+                style={{ cursor: "pointer" }}
+              >
+                projects
+              </span>{" "}
+              tab to see some of my work.
             </Typography>
           </Zoom>
           <br />
@@ -52,6 +73,10 @@ const About = () => {
             </Typography>
           </Zoom>
         </div>
+      </div>
+      <br />
+      <br />
+      <div className='row'>
         <div className='col'>
           <Zoom in={zoom}>
             <Typography
